@@ -1,0 +1,12 @@
+apx/build/
+live-build/chroot/
+live-build/binary/
+live-build/cache/
+live-build/.build/
+live-build/config/binary
+live-build/config/bootstrap
+live-build/config/chroot
+live-build/config/common
+live-build/config/source
+live-build/config/packages.chroot/*.deb
+*.iso

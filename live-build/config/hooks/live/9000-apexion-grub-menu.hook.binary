@@ -1,0 +1,8 @@
+#!/bin/sh
+# Выполняется на этапе сборки ISO: меняем подписи в меню загрузчиков.
+# Путь зависит от папки, из которой запущен хук, поэтому перебираем оба варианта.
+for f in binary/boot/grub/*.cfg boot/grub/*.cfg binary/isolinux/*.cfg isolinux/*.cfg; do
+    if [ -f "$f" ]; then
+        sed -i 's/Debian GNU\/Linux Live/Apexion Linux/g; s/Debian Live/Apexion Linux/g' "$f"
+    fi
+done

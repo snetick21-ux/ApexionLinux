@@ -1,0 +1,21 @@
+#!/bin/sh
+# Параметры образа Apexion Linux 0.1 на Debian trixie (live-build).
+# Флаги сверены с документацией lb_config для trixie.
+set -e
+
+lb config noauto \
+    --mode debian \
+    --distribution trixie \
+    --architectures amd64 \
+    --linux-flavours amd64 \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --system live \
+    --initsystem systemd \
+    --binary-image iso-hybrid \
+    --bootloaders "grub-pc grub-efi" \
+    --debian-installer none \
+    --iso-application "Apexion Linux" \
+    --iso-publisher "Apexion Team" \
+    --iso-volume "APEXION_0_1" \
+    --bootappend-live "boot=live components quiet splash hostname=apexion username=user" \
+    "${@}"

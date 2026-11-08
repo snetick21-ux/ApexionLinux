@@ -1,0 +1,12 @@
+#!/bin/sh
+# Выполняется внутри chroot после установки пакетов (хуки для --system live).
+set -e
+
+# Сводка системы в каждом интерактивном терминале
+cat >> /etc/bash.bashrc <<'EOF'
+
+# Apexion: сводка системы через fastfetch
+if [ -n "$PS1" ] && command -v fastfetch >/dev/null 2>&1; then
+    fastfetch
+fi
+EOF

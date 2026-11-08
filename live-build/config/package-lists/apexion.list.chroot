@@ -1,0 +1,22 @@
+# --- рабочий стол ---
+xfce4
+xfce4-terminal
+lightdm
+lightdm-gtk-greeter
+network-manager
+network-manager-gnome
+# --- система ---
+systemd-sysv
+sudo
+nano
+curl
+ca-certificates
+# --- загрузчик: бинарники GRUB для установки на диск ---
+grub-common
+grub-pc-bin
+grub-efi-amd64-bin
+# --- приложения ---
+fastfetch
+mousepad
+file-roller
+firefox-esr
